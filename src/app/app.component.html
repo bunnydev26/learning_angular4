@@ -6,3 +6,8 @@
 	</ng-container>
 </bootstrap-panel>
 
+<input type="text" #some (keyup.enter)="onClicked(some.value)"/>
+
+<input [(ngModel)]="dataRe" />
+
+{{ dataRe }}

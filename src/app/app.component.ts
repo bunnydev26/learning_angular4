@@ -5,5 +5,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
- 
+	dataRe: string;
+	onClicked(some) {
+		console.log(`Typing ${some.keyCode}`);
+		console.log(some);
+	} 
 }
