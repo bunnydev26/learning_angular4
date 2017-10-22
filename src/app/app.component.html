@@ -6,3 +6,11 @@
 <ng-template #nocourses>
 	<h1>No courses Found</h1>
 </ng-template>
+
+<div [hidden]="courses.length == 0">
+	Showing Data
+</div>
+
+<div [hidden]="courses.length > 0">
+	I am not showing data
+</div>
