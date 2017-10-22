@@ -1,13 +1,8 @@
-<bootstrap-panel>
-	<ng-container class="heading">First Panel</ng-container>
-	<ng-container class="body">
-		<h2>Body</h2>
-		<p>There is some data in the body</p>
-	</ng-container>
-</bootstrap-panel>
-
-<input type="text" #some (keyup.enter)="onClicked(some.value)"/>
-
-<input [(ngModel)]="dataRe" />
-
-{{ dataRe }}
+<div *ngIf="courses.length > 0; then coursesfound else nocourses">
+</div>
+<ng-template #coursesfound>
+	<h1>List of courses</h1>
+</ng-template>
+<ng-template #nocourses>
+	<h1>No courses Found</h1>
+</ng-template>
