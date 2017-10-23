@@ -1,16 +1,11 @@
-<div *ngIf="courses.length > 0; then coursesfound else nocourses">
-</div>
-<ng-template #coursesfound>
-	<h1>List of courses</h1>
-</ng-template>
-<ng-template #nocourses>
-	<h1>No courses Found</h1>
-</ng-template>
 
-<div [hidden]="courses.length == 0">
-	Showing Data
-</div>
+<ul class="nav nav-pills">
+    <li [class.active]="viewMode == 'map'"><a (click)="viewMode = 'map'">Map View</a></li>
+    <li [class.active]="viewMode == 'list'"><a (click)="viewMode = 'list'">List View</a></li>
+</ul>
 
-<div [hidden]="courses.length > 0">
-	I am not showing data
+<div [ngSwitch]="viewMode">
+    <div *ngSwitchCase="'map'">Map View Content</div>
+    <div *ngSwitchCase="'list'">List View Content</div>
+    <div *ngSwitchDefault="">Otherwise</div>
 </div>
