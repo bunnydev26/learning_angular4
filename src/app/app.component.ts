@@ -5,5 +5,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-	viewMode:string = 'map';
+	courses = [
+   {id: 1, name: 'Python'} ,
+   {id: 2, name: 'NodeJs'} ,
+   {id: 3, name: 'Angular 4'} ,
+   {id: 4, name: 'MongoDB'} ,
+   {id: 5, name: 'Express JS'} ,
+  ];
+
+ 
 }
