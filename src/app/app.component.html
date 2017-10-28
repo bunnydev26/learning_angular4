@@ -1,16 +1,9 @@
 
-<input type="text" #courseName />
-<input type="button" (click)="add(courseName.value); courseName.value=''" value="Add"/>
+
+<input type="button" (click)="loadCourses()" value="Load Data"/>
 
 <ul>
-    <li *ngFor="let course of courses; index as i; odd as e; ">
-        {{i}} - {{ course.name }} - {{ e }}
+    <li *ngFor="let course of courses; trackBy: trackByCoursId">
+        {{ course.name }}
     </li>
 </ul>
-
-<table>
-    <tr *ngFor="let course of courses; even as isEven">
-        <td [class.back]="isEven">{{ course.name }}</td>
-        <td><button (click)="remove(course)">Remove</button></td>
-    </tr>
-</table>
